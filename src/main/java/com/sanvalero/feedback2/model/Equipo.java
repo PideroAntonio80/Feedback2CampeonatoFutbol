@@ -66,15 +66,7 @@ public class Equipo {
 		this.categoria = categoria;
 	}
 
-	public List<DetallesEquipo> getDetalles() {
-		return detalles;
-	}
-
-	public void setDetalles(List<DetallesEquipo> detalles) {
-		this.detalles = detalles;
-	}
-	
-	public void listaJugadores(Jugador jugador) {
+	public void ingresarJugadorLista(Jugador jugador) {
 		listaJugadores.add(jugador);
 	}
 	

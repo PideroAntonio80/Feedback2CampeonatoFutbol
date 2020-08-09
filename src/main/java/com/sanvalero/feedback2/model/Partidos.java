@@ -7,11 +7,11 @@ public class Partidos {
 	private short numeroPartido;
 	private LocalDate fecha;
 	private String campo;
-	private String equipo1;
-	private String equipo2;
+	private Equipo equipo1;
+	private Equipo equipo2;
 	private String arbitro;
 	
-	public Partidos(short numeroPartido, LocalDate fecha, String campo, String equipo1, String equipo2,
+	public Partidos(short numeroPartido, LocalDate fecha, String campo, Equipo equipo1, Equipo equipo2,
 			String arbitro) {
 		super();
 		this.numeroPartido = numeroPartido;
@@ -46,19 +46,19 @@ public class Partidos {
 		this.campo = campo;
 	}
 
-	public String getEquipo1() {
+	public Equipo getEquipo1() {
 		return equipo1;
 	}
 
-	public void setEquipo1(String equipo1) {
+	public void setEquipo1(Equipo equipo1) {
 		this.equipo1 = equipo1;
 	}
 
-	public String getEquipo2() {
+	public Equipo getEquipo2() {
 		return equipo2;
 	}
 
-	public void setEquipo2(String equipo2) {
+	public void setEquipo2(Equipo equipo2) {
 		this.equipo2 = equipo2;
 	}
 
