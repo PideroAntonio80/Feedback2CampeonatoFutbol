@@ -2,34 +2,39 @@ package com.sanvalero.feedback2.model;
 
 public class DetallesJugador {
 	
-	private short goles;
-	private short tarjetasRojas;
-	private short tarjetasAmarillas;
+	private int goles;
+	private int tarjetasRojas;
+	private int tarjetasAmarillas;
 	
-	public DetallesJugador(short goles, short tarjetasRojas, short tarjetasAmarillas) {
+	public DetallesJugador(int goles, int tarjetasRojas, int tarjetasAmarillas) {
 		super();
 		this.goles = goles;
 		this.tarjetasRojas = tarjetasRojas;
 		this.tarjetasAmarillas = tarjetasAmarillas;
 	}
 	
-	public short getGoles() {
+	public int getGoles() {
 		return goles;
 	}
-	public void setGoles(short goles) {
+	public void setGoles(int goles) {
 		this.goles = goles;
 	}
-	public short getTarjetasRojas() {
+	public int getTarjetasRojas() {
 		return tarjetasRojas;
 	}
-	public void setTarjetasRojas(short tarjetasRojas) {
+	public void setTarjetasRojas(int tarjetasRojas) {
 		this.tarjetasRojas = tarjetasRojas;
 	}
-	public short getTarjetasAmarillas() {
+	public int getTarjetasAmarillas() {
 		return tarjetasAmarillas;
 	}
-	public void setTarjetasAmarillas(short tarjetasAmarillas) {
+	public void setTarjetasAmarillas(int tarjetasAmarillas) {
 		this.tarjetasAmarillas = tarjetasAmarillas;
+	}
+	
+	public int totalFaltas(int tarjetasRojas, int tarjetasAmarillas) {
+		int faltas = tarjetasRojas + tarjetasAmarillas;
+		return faltas;
 	}
 	
 }

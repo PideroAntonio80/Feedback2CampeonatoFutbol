@@ -2,15 +2,15 @@ package com.sanvalero.feedback2.model;
 
 public class ResultadoPartidos {
 	
-	private short numeroPartido;
+	private int numeroPartido;
 	private Equipo equipo1;
-	private short golesEquipo1;
+	private int golesEquipo1;
 	private Equipo equipo2;
-	private short golesEquipo2;
+	private int golesEquipo2;
 	private String incidencias;
 	private String observaciones;
 
-	public ResultadoPartidos(short numeroPartido, Equipo equipo1, short golesEquipo1, Equipo equipo2, short golesEquipo2, String incidencias,
+	public ResultadoPartidos(int numeroPartido, Equipo equipo1, int golesEquipo1, Equipo equipo2, int golesEquipo2, String incidencias,
 			String observaciones) {
 		super();
 		this.numeroPartido = numeroPartido;
@@ -22,11 +22,11 @@ public class ResultadoPartidos {
 		this.observaciones = observaciones;
 	}
 
-	public short getNumeroPartido() {
+	public int getNumeroPartido() {
 		return numeroPartido;
 	}
 
-	public void setNumeroPartido(short numeroPartido) {
+	public void setNumeroPartido(int numeroPartido) {
 		this.numeroPartido = numeroPartido;
 	}
 	
@@ -38,11 +38,11 @@ public class ResultadoPartidos {
 		this.equipo1 = equipo1;
 	}
 
-	public short getGolesEquipo1() {
+	public int getGolesEquipo1() {
 		return golesEquipo1;
 	}
 
-	public void setGolesEquipo1(short golesEquipo1) {
+	public void setGolesEquipo1(int golesEquipo1) {
 		this.golesEquipo1 = golesEquipo1;
 	}
 	
@@ -54,11 +54,11 @@ public class ResultadoPartidos {
 		this.equipo2 = equipo2;
 	}
 
-	public short getGolesEquipo2() {
+	public int getGolesEquipo2() {
 		return golesEquipo2;
 	}
 
-	public void setGolesEquipo2(short golesEquipo2) {
+	public void setGolesEquipo2(int golesEquipo2) {
 		this.golesEquipo2 = golesEquipo2;
 	}
 
@@ -80,21 +80,18 @@ public class ResultadoPartidos {
 	
 	/****************Metodo para obtener el marcador de resultados****************/
 	
-	public void marcadorResultado(Equipo equipo1, Equipo equipo2, short golesEquipo1, short golesEquipo2) {
+	public String marcadorResultado(Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2) {
 		
 		if (golesEquipo1 > golesEquipo2) {
-			System.out.println("El resultado del partido es: " + equipo1 + ": " + golesEquipo1 + " - " + equipo2 + ": " + golesEquipo2);
-			System.out.println("Ganador: " + equipo1);
+			return "El resultado del partido es: " + equipo1.getNombre() + ": " + golesEquipo1 + " - " + equipo2.getNombre() + ": " + golesEquipo2;
 		}
 		
 		else if (golesEquipo1 < golesEquipo2) {
-			System.out.println("El resultado del partido es: " + equipo2 + ": " + golesEquipo2 + " - " + equipo1 + ": " + golesEquipo1);
-			System.out.println("Ganador: " + equipo2);
+			return "El resultado del partido es: " + equipo2.getNombre() + ": " + golesEquipo2 + " - " + equipo1.getNombre() + ": " + golesEquipo1;
 		}
 		
 		else {
-			System.out.println("El resultado del partido es: " + equipo1 + ": " + golesEquipo1 + " - " + equipo2 + ": " + golesEquipo2);
-			System.out.println("Empate");
+			return "El resultado del partido es: " + equipo1.getNombre() + ": " + golesEquipo1 + " - " + equipo2.getNombre() + ": " + golesEquipo2;
 		}
 		
 	}

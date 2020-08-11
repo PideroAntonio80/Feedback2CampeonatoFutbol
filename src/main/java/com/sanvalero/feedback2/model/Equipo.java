@@ -22,7 +22,7 @@ public class Equipo {
 		this.colorCamiseta2 = colorCamiseta2;
 		this.categoria = categoria;
 		
-		listaJugadores = new ArrayList<>();
+		setListaJugadores(new ArrayList<>());
 		detalles = new ArrayList<>();
 	}
 
@@ -65,13 +65,21 @@ public class Equipo {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
+	public List<Jugador> getListaJugadores() {
+		return listaJugadores;
+	}
+
+	public void setListaJugadores(List<Jugador> listaJugadores) {
+		this.listaJugadores = listaJugadores;
+	}
 
 	public void ingresarJugadorLista(Jugador jugador) {
-		listaJugadores.add(jugador);
+		getListaJugadores().add(jugador);
 	}
 	
 	public void eliminarJugador(Jugador jugador) {
-		listaJugadores.remove(jugador);
+		getListaJugadores().remove(jugador);
 	}
 	
 	public void editarDetallesEquipo(short partidosDisputados, short victorias, short derrotas, short empates, short posicionRanking) {

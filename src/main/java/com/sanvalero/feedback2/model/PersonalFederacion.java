@@ -8,8 +8,8 @@ public class PersonalFederacion extends Usuario {
 	
 	private String puestoTrabajo;
 	private LocalDate fechaIncorporacion;
-	private List<Jugador> jugadores;
-	private List<Equipo> equipos;
+	private List<Jugador> jugadoresFederados;
+	private List<Equipo> equiposFederacion;
 	
 	public PersonalFederacion(String idUsuario, String contraseña, String nombre, String apellidos,
 			LocalDate fechaNacimiento, String direccion, int telefono, String puestoTrabajo,
@@ -17,8 +17,8 @@ public class PersonalFederacion extends Usuario {
 		super(idUsuario, contraseña, nombre, apellidos, fechaNacimiento, direccion, telefono);
 		this.puestoTrabajo = puestoTrabajo;
 		this.fechaIncorporacion = fechaIncorporacion;
-		jugadores = new ArrayList<>();
-		equipos = new ArrayList<>();
+		jugadoresFederados = new ArrayList<>();
+		equiposFederacion = new ArrayList<>();
 	}
 
 	public String getPuestoTrabajo() {
@@ -37,20 +37,36 @@ public class PersonalFederacion extends Usuario {
 		this.fechaIncorporacion = fechaIncorporacion;
 	}
 	
+	public List<Jugador> getJugadoresFederados() {
+		return jugadoresFederados;
+	}
+
+	public void setJugadoresFederados(List<Jugador> jugadoresFederados) {
+		this.jugadoresFederados = jugadoresFederados;
+	}
+
+	public List<Equipo> getEquiposFederacion() {
+		return equiposFederacion;
+	}
+
+	public void setEquiposFederacion(List<Equipo> equiposFederacion) {
+		this.equiposFederacion = equiposFederacion;
+	}
+	
 	public void registrarJugador(Jugador jugador) {
-		jugadores.add(jugador);
+		jugadoresFederados.add(jugador);
 	}
 	
 	public void eliminarJugador(Jugador jugador) {
-		jugadores.remove(jugador);
+		jugadoresFederados.remove(jugador);
 	}
 	
 	public void registrarEquipo(Equipo equipo) {
-		equipos.add(equipo);
+		equiposFederacion.add(equipo);
 	}
 	
 	public void eliminarEquipo(Equipo equipo) {
-		equipos.remove(equipo);
+		equiposFederacion.remove(equipo);
 	}
 
 }

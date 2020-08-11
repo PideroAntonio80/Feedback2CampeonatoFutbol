@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Jugador extends Usuario {
 	
-	private byte numeroCamiseta;
+	private int numeroCamiseta;
 	private String posicionEquipo;
 	
 	private List<DetallesJugador> detalles;
 	
 	public Jugador(String idUsuario, String contraseña, String nombre, String apellidos, LocalDate fechaNacimiento,
-			String direccion, int telefono, byte numeroCamiseta, String posicionEquipo) {
+			String direccion, int telefono, int numeroCamiseta, String posicionEquipo) {
 		super(idUsuario, contraseña, nombre, apellidos, fechaNacimiento, direccion, telefono);
 		this.numeroCamiseta = numeroCamiseta;
 		this.posicionEquipo = posicionEquipo;
@@ -21,7 +21,7 @@ public class Jugador extends Usuario {
 
 	}
 	
-	public byte getNumeroCamiseta() {
+	public int getNumeroCamiseta() {
 		return numeroCamiseta;
 	}
 	public void setNumeroCamiseta(byte numeroCamiseta) {
@@ -42,7 +42,7 @@ public class Jugador extends Usuario {
 		this.detalles = detalles;
 	}
 	
-	public void editarDetallesJugador(short goles, short tarjetasRojas, short tarjetasAmarillas) {
+	public void editarDetallesJugador(int goles, int tarjetasRojas, int tarjetasAmarillas) {
 		DetallesJugador detalle = new DetallesJugador(goles, tarjetasRojas, tarjetasAmarillas);
 		detalles.add(detalle);
 	}

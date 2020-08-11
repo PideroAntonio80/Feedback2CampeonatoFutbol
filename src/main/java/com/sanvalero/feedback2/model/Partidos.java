@@ -1,6 +1,8 @@
 package com.sanvalero.feedback2.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Partidos {
 
@@ -11,6 +13,8 @@ public class Partidos {
 	private Equipo equipo2;
 	private String arbitro;
 	
+	private List<ResultadoPartidos> resultados;
+	
 	public Partidos(short numeroPartido, LocalDate fecha, String campo, Equipo equipo1, Equipo equipo2,
 			String arbitro) {
 		super();
@@ -20,6 +24,9 @@ public class Partidos {
 		this.equipo1 = equipo1;
 		this.equipo2 = equipo2;
 		this.arbitro = arbitro;
+		
+		setResultados(new ArrayList<>());
+		
 	}
 
 	public short getNumeroPartido() {
@@ -68,6 +75,14 @@ public class Partidos {
 
 	public void setArbitro(String arbitro) {
 		this.arbitro = arbitro;
+	}
+
+	public List<ResultadoPartidos> getResultados() {
+		return resultados;
+	}
+
+	public void setResultados(List<ResultadoPartidos> resultados) {
+		this.resultados = resultados;
 	}
 	
 	
