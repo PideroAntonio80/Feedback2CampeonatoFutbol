@@ -27,8 +27,8 @@ public class Usuario {
 		this.fechaNacimiento = fechaNacimiento;
 		this.direccion = direccion;
 		this.telefono = telefono;
-		mensajesEnviados = new ArrayList<>();
-		mensajesRecibidos = new ArrayList<>();
+		setMensajesEnviados(new ArrayList<>());
+		setMensajesRecibidos(new ArrayList<>());
 	}
 
 	public String getIdUsuario() {
@@ -85,6 +85,22 @@ public class Usuario {
 
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
+	}
+
+	public List<Mensaje> getMensajesEnviados() {
+		return mensajesEnviados;
+	}
+
+	public void setMensajesEnviados(List<Mensaje> mensajesEnviados) {
+		this.mensajesEnviados = mensajesEnviados;
+	}
+
+	public List<Mensaje> getMensajesRecibidos() {
+		return mensajesRecibidos;
+	}
+
+	public void setMensajesRecibidos(List<Mensaje> mensajesRecibidos) {
+		this.mensajesRecibidos = mensajesRecibidos;
 	}
 	
 }

@@ -18,7 +18,7 @@ public class PersonalFederaciontest {
 	}
 	
 	@Test
-	public void registrarJugador() {
+	public void registrar_eliminar_jugador() {
 		Jugador berta = new Jugador(null, null, null, null, null, null, 0, 0, null);
 		Jugador isabel = new Jugador(null, null, null, null, null, null, 0, 0, null);
 		Jugador pedro = new Jugador(null, null, null, null, null, null, 0, 0, null);
@@ -34,11 +34,13 @@ public class PersonalFederaciontest {
 		//Comprobamos jugadores federados
 		assertEquals(5, secretario.getJugadoresFederados().size());
 		
-		secretario.eliminarJugador(eugenia);
-		secretario.eliminarJugador(alberto);
 		
-		//Comprobamos de nuevo la lista tras eliminar algunos
-		assertEquals(3, secretario.getJugadoresFederados().size());
+		secretario.eliminarJugador(eugenia); 
+		secretario.eliminarJugador(alberto);
+		  
+		//Comprobamos de nuevo la lista tras eliminar algunos 
+		assertEquals(3,secretario.getJugadoresFederados().size());
+		 
 	}
 	
 }

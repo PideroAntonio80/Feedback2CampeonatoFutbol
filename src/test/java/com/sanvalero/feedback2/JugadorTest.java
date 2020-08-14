@@ -41,6 +41,7 @@ public class JugadorTest {
 	  public void totalFaltas() { 
 		  DetallesJugador penalizaciones = new DetallesJugador(13, 1, 7);
 	  
-		  assertEquals(8, penalizaciones.totalFaltas(1, 7)); }
+		  assertEquals(8, penalizaciones.totalFaltas(1, 7)); 
+	  }
 
 }

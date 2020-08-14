@@ -25,7 +25,7 @@ public class Partidos {
 		this.equipo2 = equipo2;
 		this.arbitro = arbitro;
 		
-		setResultados(new ArrayList<>());
+		resultados = new ArrayList<>();
 		
 	}
 
@@ -84,7 +84,5 @@ public class Partidos {
 	public void setResultados(List<ResultadoPartidos> resultados) {
 		this.resultados = resultados;
 	}
-	
-	
 	
 }
