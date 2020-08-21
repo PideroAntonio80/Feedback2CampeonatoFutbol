@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import com.sanvalero.feedback2.model.Jugador;
 import com.sanvalero.feedback2.model.PersonalFederacion;
 
-public class PersonalFederaciontest {
+public class PersonalFederacionTest {
 	
 	private static PersonalFederacion secretario;
 	

@@ -17,6 +17,8 @@ public class Main {
 			break;
 		case "NO":
 			System.out.println("Hasta pronto");
+		
+		sc.close();
 		}
 
 	}
